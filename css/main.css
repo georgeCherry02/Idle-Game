@@ -1,0 +1,235 @@
+/* Page Layout */
+* {
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+#board_container, #game_control_container {
+    position: absolute;
+    top: 0;
+    display: inline-block;
+    height: 100%;
+}
+#board_container {
+    width: 80%;
+}
+#game_control_container {
+    left: 80%;
+    width: 20%;
+    border-left: 1px solid black;
+}
+
+/* Board Styling */
+.board_tile {
+    position: relative;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-size: 10px !important;
+    border: 0.1px solid black;
+    z-index: 50;
+}
+.board_row {
+    height: 10px;
+}
+.board {
+    margin: 20px;
+}
+
+/* Tile styling */
+.grass {
+    background: #10b537;
+    border: #067520 0.1px solid;
+}
+.forest {
+    background: #078511;
+    border: #026109 0.1px solid;
+}
+[class*="path-"] {
+    border: #067520 0.1px solid;
+}
+.path {
+    background: red;
+    border: black 0.1px solid;
+}
+.water {
+    background: #229af5;
+    border: #0b6db8 0.1px solid;
+}
+.wheat {
+    background: #dbc45e;
+    border: #a38e2e 0.1px solid;
+}
+.forest.type-1 {
+    background-image: url("../resources/images/nature/forest1.png");
+}
+.forest.type-2 {
+    background-image: url("../resources/images/nature/forest2.png");
+}
+.forest.type-3 {
+    background-image: url("../resources/images/nature/forest3.png");
+}
+.grass.type-1 {
+    background-image: url("../resources/images/nature/grass1.png");
+}
+.grass.type-2 {
+    background-image: url("../resources/images/nature/grass2.png");
+}
+.grass.type-3 {
+    background-image: url("../resources/images/nature/grass3.png");
+}
+.path-vert {
+    background-image: url("../resources/images/buildings/path_vertical.png");
+}
+.path-hori {
+    background-image: url("../resources/images/buildings/path_horizontal.png");
+}
+.path-top-right {
+    background-image: url("../resources/images/buildings/path_top_right.png");
+}
+.path-left-top {
+    background-image: url("../resources/images/buildings/path_left_top.png");
+}
+.path-right-bottom {
+    background-image: url("../resources/images/buildings/path_right_bottom.png");
+}
+.path-bottom-left {
+    background-image: url("../resources/images/buildings/path_bottom_left.png");
+}
+.path-cross {
+    background-image: url("../resources/images/buildings/path_cross.png");
+}
+.path-t-up {
+    background-image: url("../resources/images/buildings/path_t_up.png");
+}
+.path-t-right {
+    background-image: url("../resources/images/buildings/path_t_right.png");
+}
+.path-t-down {
+    background-image: url("../resources/images/buildings/path_t_down.png")
+}
+.path-t-left {
+    background-image: url("../resources/images/buildings/path_t_left.png");
+}
+.path-nub-top {
+    background-image: url("../resources/images/buildings/path_nub_top.png");
+}
+.path-nub-right {
+    background-image: url("../resources/images/buildings/path_nub_right.png");
+}
+.path-nub-down {
+    background-image: url("../resources/images/buildings/path_nub_down.png");
+}
+.path-nub-left {
+    background-image: url("../resources/images/buildings/path_nub_left.png");
+}
+.path-dot {
+    background-image: url("../resources/images/buildings/path_dot.png");
+}
+.water.type-1 {
+    background-image: url("../resources/images/nature/water1.png");
+}
+.water.type-2 {
+    background-image: url("../resources/images/nature/water2.png");
+}
+.water.type-3 {
+    background-image: url("../resources/images/nature/water3.png");
+}
+.wheat.type-1 {
+    background-image: url("../resources/images/nature/wheat1.png");
+}
+.wheat.type-2 {
+    background-image: url("../resources/images/nature/wheat2.png");
+}
+.wheat.type-3 {
+    background-image: url("../resources/images/nature/wheat3.png");
+}
+.tent {
+    background-image: url("../resources/images/buildings/tent.png");
+    border: 0.1px solid #997a15;
+}
+
+/* Game Control Styling */
+#game_resources_counter {
+    padding: 20px;
+    border-bottom: 1px solid black;
+}
+.build_buttons_container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.build_button {
+    display: inline-block;
+    height: 32px;
+    width: 32px;
+    margin: 10px;
+}
+.build_button i {
+    font-size: 32px;
+}
+.build_subsection {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: white;
+}
+.build_subsection_close {
+    height: 10px;
+    width: 10px;
+    position: absolute;
+    right: 2px;
+    top: 2px;
+}
+.sub_build_button {
+    width: 80%;
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 2px;
+    box-shadow: 3px 3px #ddd;
+    margin-bottom: 0;
+}
+.sub_build_button h5 {
+    display: inline-block;
+    margin: 0;
+}
+.modify_task_button {
+    float: right;
+    margin-left: 2px;
+    height: 16px;
+    width: 16px;
+    border-radius: 3px;
+}
+.positive {
+    color: green;
+}
+.negative {
+    color: red;
+}
+/* Building GUI */
+.build_bar {
+    z-index: 30;
+    width: 80%;
+    margin: 10%;
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    background: red;
+}
+.build_progress_bar {
+    z-index: 30;
+    background: green;
+    height: 100%;
+}
+.build_highlight {
+    z-index: 31;
+    width: 100%;
+    height: 100%;
+    background: #ccc;
+    opacity: 0.4;
+}
